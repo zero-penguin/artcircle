@@ -1,8 +1,11 @@
 .slide {
   position: relative; /* 親要素にrelativeを指定 */
+  bottom: -50px; /*下寄せの指定*/
+  margin: 0;
  }
   
  .slide img {
   position: absolute; /* absoluteで画像を重ねる */
   display: none; /* 画像を非表示に非表示 */
  }
+
