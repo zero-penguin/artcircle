@@ -1,11 +1,112 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a background color for the body */
+body {
+  background-image: url("./img/black_00104.jpg");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+/* Style the header */
+header {
+  top:0;
+  left:0;
+  background-image: url("https://magazine-cf.techacademy.jp/wp-content/uploads/2021/02/16012113/sunrise.jpg");
+  animation: sunrise 1s infinite;
+  color: rgb(98, 46, 46);
+  font-family: 'Sacramento', cursive;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Style the main section */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+main h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.main-log {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.main-info {
+  flex: 0 0 300px;
+  background-color: white;
+  padding: 20px;
+}
+
+.main-info p {
+  margin-bottom: 10px;
+}
+
 .slide {
   position: relative; /* 親要素にrelativeを指定 */
-  bottom: -50px; /*下寄せの指定*/
-  margin: 0;
+  bottom: 0; /*下寄せの指定*/
+  left: 50%;
+  transform: translate(-90%);
+  z-index: 10;
  }
   
  .slide img {
   position: absolute; /* absoluteで画像を重ねる */
   display: none; /* 画像を非表示に非表示 */
+  left: 50%;
+  z-index:10;
  }
+
+/* Style the footer */
+footer {
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+footer p {
+  color: white;
+  text-align:right;
+  padding-right: 400px;
+}
+
 
