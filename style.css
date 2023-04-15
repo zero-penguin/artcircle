@@ -64,6 +64,42 @@ main h2 {
   margin-bottom: 10px;
 }
 
+.page_main {
+  position: relative;
+  z-index: 11;
+  }
+  .page_main > aside {
+  background-color: rgba(76,84,130,0.8);
+  width: 350px;
+  height: 100%;
+  top: 0;
+  left: -350px;
+  position: fixed;
+  }
+  .page_main > aside ul {
+  margin: 0;
+  padding: 0;
+  top: 50px;
+  left: 114px;
+  position: absolute;
+  }
+  .page_main > aside li {
+  margin: 20px auto;
+  list-style: none;
+  }
+  .page_main > aside button {
+  background-color: rgba(76,84,130,0.8);
+  display: block;
+  position: absolute;
+  top: 150px;
+  left: 350px;
+  width: 52px;
+  height: 132px;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 5px 5px 0;
+  }
+
 .main-log {
   flex: 1;
   margin-right: 20px;
@@ -79,11 +115,19 @@ main h2 {
   margin-bottom: 10px;
 }
 
+.slides {
+  display:flex;
+  flex-flow: column;
+  justify-content:space-around;
+}
+
 .slide {
+  display: flex;
   position: relative; /* 親要素にrelativeを指定 */
   bottom: 0; /*下寄せの指定*/
   left: 50%;
-  transform: translate(-90%);
+  transform: translate(-95%);
+  margin-left: 20px;
   z-index: 10;
  }
   
@@ -91,6 +135,7 @@ main h2 {
   position: absolute; /* absoluteで画像を重ねる */
   display: none; /* 画像を非表示に非表示 */
   left: 50%;
+  margin-left: 20px;
   z-index:10;
  }
 
@@ -109,4 +154,6 @@ footer p {
   padding-right: 400px;
 }
 
-
+.slides {
+  justify-content: space-between;
+}

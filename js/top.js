@@ -29,3 +29,29 @@ $(document).ready(function() {
     });
   });
 });
+
+// ドキュメントが読み込まれるのを待機
+$(function(){
+  // アニメーション速度を制御するduration変数を設定
+  var duration = 300;
+  // クラス名が"page_main"の要素内にあるaside要素を検索
+  var aside = $(".page_main > aside");
+  // aside要素内のbutton要素を検索し、クリックイベントリスナーを検索
+  var asideButton = aside.find("button")
+  .on("click", function(){
+    // aside要素に"open"クラスをトグル
+    aside.toggleClass("open");
+    // もしaside要素が"open"クラスを持っていれば...
+    if(aside.hasClass("open")){
+      // aside要素をdurationの時間で左に70pxスライド
+      aside.stop(true).animate({left: "-70px"}, duration);
+      // ボタン要素内のimgタグのソースを"./img/button.png"に変更
+      asideButton.find("img").attr("src", "./img/button.png");
+      }else{
+      // aside要素を元の位置に戻す
+      aside.stop(true).animate({left: "-350px"}, duration);
+      // ボタン要素内のimgタグのソースを元に戻す
+      asideButton.find("img").attr("src", "./img/button.png");
+      };
+    });
+  });
